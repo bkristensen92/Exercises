@@ -1,0 +1,41 @@
+* {
+    box-sizing:border-box;
+}
+
+body {
+    background-image: url("https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/9ba4d513-ea0e-4974-91a1-7f243bab4677/d90hia8-d484a836-6c2b-4129-abe8-aacb54d85792.png/v1/fill/w_1024,h_576,q_80,strp/rebels_vs_empire_by_soulslastsanctuary_d90hia8-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NTc2IiwicGF0aCI6IlwvZlwvOWJhNGQ1MTMtZWEwZS00OTc0LTkxYTEtN2YyNDNiYWI0Njc3XC9kOTBoaWE4LWQ0ODRhODM2LTZjMmItNDEyOS1hYmU4LWFhY2I1NGQ4NTc5Mi5wbmciLCJ3aWR0aCI6Ijw9MTAyNCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.ajQgNWVctTjVyZqoPKWA39892EzKZWGEYarwi2ilzcw");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment:fixed;
+    text-align:center;
+}
+
+.game_board {
+    width: 49.5rem;
+    height: 49.5rem;
+    margin: 0 auto;
+    background: transparent;
+    margin-top: 10px;
+    border-collapse: collapse;
+}
+
+.row {
+    width: 100%;
+    height: 33%;
+}
+
+.cell {
+    width: 33%;
+    height: 100%;
+    border: 5px solid gray;
+    float: left;
+    text-align: center;
+}
+
+div:hover div:hover div:hover{
+    background-image:url(https://lumiere-a.akamaihd.net/v1/images/starwars_551c43f4.jpeg)
+}
+
+#new_game {
+    font-size: 24px;
+}
