@@ -11,7 +11,9 @@
 
 <body>
     <div>
+        <h1 id="player_1_score">Player 1 Score: 0</h1>
         <h1>Star Wars Tic Tac Toe</h1>
+        <h1 id="player_2_score">Player 2 Score: 0</h1>
     </div>
     
     <div>
@@ -19,30 +21,30 @@
     </div>
     
     <div id="names">
-        <input type="text" id="player_1_name" placeholder="Enter Player One Name">
-        <input type="text" id="player_2_name" placeholder="Enter Player Two Name">
+        <input type="text" id="player_1_name" placeholder="Enter Player One Name" required>
+        <input type="text" id="player_2_name" placeholder="Enter Player Two Name" required>
     </div>
     <br>
     <div>
         <button class="new_game_button" id="new_game">New Game</button>
-        <button class="start_game_button" id="start_game">Start Game</button>
+        <button class="reset_game_button" id="reset_game">Reset Game</button>
     </div>
 
     <div class="game_board">
         <div class="row">
-            <div class="cell" id="one" data-tile = "one"></div>
-            <div class="cell" id="two" data-tile = "two"></div>
-            <div class="cell" id="three" data-tile = "three"></div>
+            <div class="cell" id="one"></div>
+            <div class="cell" id="two"></div>
+            <div class="cell" id="three"></div>
         </div>
         <div class="row">
-            <div class="cell" id="four" data-tile = "four"></div>
-            <div class="cell" id="five" data-tile = "five"></div>
-            <div class="cell" id="six" data-tile = "six"></div>
+            <div class="cell" id="four"></div>
+            <div class="cell" id="five"></div>
+            <div class="cell" id="six"></div>
         </div>
         <div class="row">
-            <div class="cell" id="seven" data-tile = "seven"></div>
-            <div class="cell" id="eight" data-tile = "eight"></div>
-            <div class="cell" id="nine" data-tile = "nine"></div>
+            <div class="cell" id="seven"></div>
+            <div class="cell" id="eight"></div>
+            <div class="cell" id="nine"></div>
         </div>
     </div>
 

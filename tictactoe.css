@@ -8,6 +8,12 @@ body {
     background-size: cover;
     background-attachment:fixed;
     text-align:center;
+    user-select: none;
+}
+
+h1 {
+    color: gray;
+    display: inline-block;
 }
 
 .game_board {
@@ -50,3 +56,14 @@ button {
     margin: auto;
 }
 
+#player_1_score {
+    color:black;
+    float: left;
+    margin-left: 20%;
+}
+
+#player_2_score {
+    color: white;
+    float: right;
+    margin-right: 20%
+}
