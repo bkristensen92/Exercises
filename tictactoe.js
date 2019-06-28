@@ -1,61 +1,99 @@
 'use strict'
 $(() => {
 
-let player1 = $('#player_1_name')[0];
-let player2 = $('#player_2_name')[0];
-let turn = '';
-let scoreboard = {rebel : 0 , empire : 0 };
-let gameboard = ['','','','','','','','','',]
+    let player1 = '';
+    let player2 = '';
+    let turn = '';
+    let scoreboard = { rebel: 0, empire: 0 };
+    let gameboard = ['', '', '', '', '', '', '', '', '',]
 
- function clickNewGame() {
-    if ($('#player_1_name').val() == '' || $('#player_2_name').val() == '' ) {
-        alert ("Please enter player names")
+    function clickNewGame() {
+        if ($('#player_1_name').val() == '' || $('#player_2_name').val() == '') {
+            alert("Please enter player names")
+        }
+        else {
+            player1 = $('#player_1_name').val();
+            player2 = $('#player_2_name').val();
+            setPlayerTurn();
+        }
     }
-    else {
-        return
+
+    function clickStartGame() {
+        if ($('#player_1_name').val() == '' && $('#player_2_name').val() == '') {
+            alert("Please enter player names")
+        }
+        else {
+            return
+        }
     }
- }
 
- $('.new_game_button').click(function() {
-     clickNewGame();
- });
-
-function playerTurnNotification(randomizedFirstTurn){
-    $("#player_turn").text(randomizedFirstTurn);
-}
-
-// randomizes player turns
-function setPlayerTurn() {
-    let random = Math.floor((Math.random() * 2) + 1);
-    if ($('#player_1_name').val() == '' || $('#player_2_name').val() == '' ) {
-        return
+    $('.cell').click(function () {
+        if ($('#player_1_name').val() !== '' && $('#player_2_name').val() !== '') {
+            if (!$(this).find('img').length) {
+                togglePlayerImage(this);
+                switchPlayerTurn();
+            }
+        
+        else {
+            alert("Please select another tile");
+        }
     }
-    else if (random == 1) {
+    });
+
+
+    $('.new_game_button').click(function () {
+        clickNewGame();
+
+    });
+
+    $('.start_game_button').click(function () {
+        clickStartGame();
+    });
+
+    function playerTurnNotification(randomizedFirstTurn) {
+        $("#player_turn").text(randomizedFirstTurn);
+    }
+
+    // randomizes player turns
+    function setPlayerTurn() {
+        let random = Math.floor((Math.random() * 2) + 1);
+        if ($('#player_1_name').val() == '' || $('#player_2_name').val() == '') {
+            return
+        }
+        else if (random == 1) {
+            turn = player1;
+            playerTurnNotification(player1 + "'s turn now!");
+        }
+        else {
+            turn = player2;
+            playerTurnNotification(player2 + "'s turn now!");
+        }
+    }
+
+    function togglePlayerImage(cell) {
+        if (turn == player1) {
+            $(cell).append("<img src='https://www.logolynx.com/images/logolynx/s_2f/2f3f8f269f8c2a33ab132bdba33aff75.jpeg' class='rebelOrEmpireImage'/>");
+        }
+        else {
+            $(cell).append("<img src='https://www.logolynx.com/images/logolynx/s_8e/8eaa7967795a9fd94ba5eb665985f9c7.png' class='rebelOrEmpireImage'/>");
+        }
+    }
+
+    function switchPlayerTurn() {
+        if (turn == player1) {
+            turn = player2;
+            playerTurnNotification(player2 + "'s turn now!");
+            return;
+        }
         turn = player1;
         playerTurnNotification(player1 + "'s turn now!");
     }
-    else {
-        turn = player2;
-        playerTurnNotification(player2 + "'s turn now!");
+
+
+    function updatePlayerScoreBoard() {
+
     }
-}
 
-function togglePlayerImage() {
-    if (turn == player1) {
-        boxId.innerHTML = "<img src=https://www.logolynx.com/images/logolynx/s_2f/2f3f8f269f8c2a33ab132bdba33aff75.jpeg />";
-    }
-    else {
-        boxId.innerHTML = "<img src=https://www.logolynx.com/images/logolynx/s_8e/8eaa7967795a9fd94ba5eb665985f9c7.png />";
-    }
-}
-$('#cell').prepend('<img src=https://www.logolynx.com/images/logolynx/s_2f/2f3f8f269f8c2a33ab132bdba33aff75.jpeg " />')
-
-
-function updatePlayerScoreBoard() {
-
-}
-
-console.log(setPlayerTurn());
 });
 
 // use this function with data-tile in html

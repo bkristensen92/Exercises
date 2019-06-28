@@ -30,6 +30,7 @@ body {
     border: 5px solid gray;
     float: left;
     text-align: center;
+    overflow: auto;
 }
 
 div:hover div:hover div:hover{
@@ -41,3 +42,11 @@ div:hover div:hover div:hover{
 button {
     font-size: 18px;
 }
+
+.rebelOrEmpireImage {
+    height: 100%;
+    max-width: 100%;
+    display: block;
+    margin: auto;
+}
+
