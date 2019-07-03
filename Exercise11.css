@@ -1,0 +1,19 @@
+* {
+    box-sizing: border-box
+}
+
+h1 {
+    text-align: center; 
+}
+
+.items_for_sale {
+    text-align: center;
+    display: grid;
+    grid-template-columns: 4fr;
+    grid-gap: 1em;
+}
+
+button {
+    width: 15em;
+    margin: auto;
+}
