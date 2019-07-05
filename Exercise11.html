@@ -2,67 +2,87 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=`, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="Exercise11.css">
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
     <title>Point of Sale</title>
 </head>
 
 <body>
+    <div class="list_of_scanned_items">
+
+    </div>
+
+    <div class="buttons">
+
+        <div class="finalize_transaction_layout">
+            <button class="finalize_button">Finalize Transaction</button>
+        </div>
+
+        <div class="price_check_layout">
+            <button class="price_check_button">Price Check</button>
+        </div>
+
+        <div class="cancel_transaction_layout">
+            <button class="cancel_button">Cancel Transaction</button>
+        </div>
+
+        <div class="number_pad_layout">
+            <button class="number_keys">7</button>
+            <button class="number_keys">8</button>
+            <button class="number_keys">9</button>
+            <button class="number_keys">4</button>
+            <button class="number_keys">5</button>
+            <button class="number_keys">6</button>
+            <button class="number_keys">1</button>
+            <button class="number_keys">2</button>
+            <button class="number_keys">3</button>
+            <button class="number_keys" id="zero">0</button>
+            <button class="delete_key">del</button>
+        </div>
+
+        <div class="items_for_sale_layout">
+            <!--take prices out and make price check button-->
+            <button class="items" value="SmartWater">SmartWater</button>
+            <button class="items">Ale 8</button>
+            <button class="items">Nooma</button>
+            <button class="items">Gatorade Fierce</button> <!--make 2/$3-->
+            <button class="items">Clif Bar</button>
+            <button class="items">Bolt Energy Chew</button>
+            <button class="items">Honey Stinger Waffle</button>
+            <button class="items">Simply Trail Trail Mix</button>
+            <button class="items">Country Archer Beef Jerky</button>
+            <button class="items">Joshua Tree Climbing Salve</button>
+            <button class="items">Mammut Climbing Harness</button>
+            <button class="items">Mammut Climbing Rope</button>
+            <button class="items">Mammut Chalk Bag</button>
+            <button class="items">Black Diamond ATC</button>
+            <button class="items">CampUSA Carabiner</button>
+            <button class="items">CampUSA Quickdraws</button>
+            <button class="items">Asana White Dirt</button>
+            <button class="items">Tenaya Climbing Shoes</button>
+            <button class="items">PrAna Stretch Zion Pants</button>
+            <button class="items">Metolius Master Cam</button>
+        </div>
+
+        <div class="edit_button_layout">
+            <button class="edit_button">Edit</button>
+            <div class="system_configuration_button_layout">
+                <button class="system_configuration_button">System Configuration</button>
+            </div>
+        </div>
+
+    </div>
+
     <div>
-        <h1>Cash Register</h1>
+        <h1 class="subtotal_price">Subtotal : </h1>
+        <h1 class="tax_price">Tax :</h1>
+        <h1 class="total_price">Total :</h1>
     </div>
-    <div class="number_keys">
-        <button class="w3-button w3-gray w3-round-large" id ="seven">7</button>
-        <button class="w3-button w3-gray w3-round-large" id ="eight">8</button>
-        <button class="w3-button w3-gray w3-round-large" id ="nine">9</button>
-        <button class="w3-button w3-gray w3-round-large" id ="four">4</button>
-        <button class="w3-button w3-gray w3-round-large" id ="five">5</button>
-        <button class="w3-button w3-gray w3-round-large" id ="six">6</button>
-        <button class="w3-button w3-gray w3-round-large" id ="one">1</button>
-        <button class="w3-button w3-gray w3-round-large" id ="two">2</button>
-        <button class="w3-button w3-gray w3-round-large" id ="three">3</button>
-        <button class="w3-button w3-gray w3-round-large" id ="zero">0</button>
-    </div>
-
-    <div class="items_for_sale">
-        <button class="w3-button w3-gray w3-round-large">SmartWater</button>
-        <button class="w3-button w3-gray w3-round-large">Ale8</button>
-        <button class="w3-button w3-gray w3-round-large">Nooma Coconut Water</button>
-        <button class="w3-button w3-gray w3-round-large">Gatorade Fierce</button>
-        <button class="w3-button w3-gray w3-round-large">Clif Bar</button>
-        <button class="w3-button w3-gray w3-round-large">Bolt Energy Chews</button>
-        <button class="w3-button w3-gray w3-round-large">Honey Stinger Waffle</button>
-        <button class="w3-button w3-gray w3-round-large">Simply Trail Trail Mix</button>
-        <button class="w3-button w3-gray w3-round-large">Country Archer Beef Jerky</button>
-        <button class="w3-button w3-gray w3-round-large">Joshua Tree Climbing Salve</button>
-        <button class="w3-button w3-gray w3-round-large">Mammut Climbing Harness</button>
-        <button class="w3-button w3-gray w3-round-large">Black Diamond ATC</button>
-        <button class="w3-button w3-gray w3-round-large">CampUSA Carabiner</button>
-        <button class="w3-button w3-gray w3-round-large">Mammut Infinity Dry Rope</button>
-        <button class="w3-button w3-gray w3-round-large">Asana White Dirt</button>
-        <button class="w3-button w3-gray w3-round-large">Tenaya Iati Climbing Shoes</button>
-        <button class="w3-button w3-gray w3-round-large">EaglesNest Hammock</button>
-        <button class="w3-button w3-gray w3-round-large">PrAna Stretch Zion Pants</button>
-        <button class="w3-button w3-gray w3-round-large">Mammut Chalk Bag</button>
-        <button class="w3-button w3-gray w3-round-large">Metolius Master Cam</button>
-    </div>
-    
-    <div class="edit_button">
-        <button class="w3-button w3-block w3-gray">Edit Transaction</button>
-    </div>
-    <br>
-    <div class="system_config_button">
-        <button class="w3-button w3-block w3-gray">System Configure</button>
-    </div>
-
-
-
-
     <script src="Exercise11.js"></script>
-    <script src="https://code.jquery.com/jquery-3.4.1.js"
-        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
 </body>
 
 </html>

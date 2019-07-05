@@ -2,29 +2,118 @@
     box-sizing: border-box
 }
 
+body {
+    background-color: lavender;
+    padding: 1em;
+}
 h1 {
     text-align: center; 
 }
 
-.items_for_sale {
-    text-align: center;
+.number_pad_layout {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-gap: .5em;
+    width: 15em;
+    height: 19.5em;
+    position: absolute;
+    right:44%;
+    top: 1em;
+}
+
+#zero {
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+.number_keys {
+    background-color: gray;
+}
+
+.delete_key {
+    background-color: red;
+}
+
+.list_of_scanned_items {
+    height: 20em;
+    width: 42%;
+    overflow: auto;
+    padding: 2em;
+    margin-bottom: 2em;
+    background-color: white;
+}
+
+.items_for_sale_layout {
     display: grid;
     grid-template-columns: auto auto auto auto;
     grid-gap: 1em;
-    justify-items: center;
-    margin: 1em;
-    width: 15em;
+    width: 100%;
+    height: 15em;
+    margin-bottom: 5em;
 }
 
-button {
-    width: 15em;
-    margin: auto;
+.price_check_layout {
+    position: absolute;
+    right: 30%;
+    top: 5.5em;
 }
-.number_keys {
-    text-align: center;
-    display: grid;
-    grid-template-columns: auto auto auto;
-    grid-gap: 1em;
-    justify-items: center;
-    margin: 1em;
+
+.price_check_button {
+    font-size: 24px;
+    height: 4em;
+    width: 10em;
+    background-color: purple;
+    margin-top: 1.5em;
+}
+
+.finalize_transaction_layout {
+    position: absolute;
+    right:30%;
+    top: 1em;
+}
+
+.finalize_button {
+    font-size: 24px;
+    height: 4em;
+    width: 10em;
+    background-color:green;
+}
+
+.cancel_transaction_layout {
+    position: absolute;
+    right:30%;
+    top: 11em;
+}
+
+.cancel_button {
+    font-size: 24px;
+    height: 4em;
+    width: 10em;
+    background-color:orange;
+    margin-top: 2.5em;
+}
+
+.edit_button_layout {
+    position: absolute;
+    right: 10%;
+    top: .2em;
+    margin-top: 1em;
+}
+
+.edit_button {
+    font-size: 48px;
+    height: 3em;
+    width: 7em;
+    background-color: yellow;
+}
+
+.system_configuration_button_layout {
+    margin-top: 1em;
+}
+
+.system_configuration_button {
+    font-size: 48px;
+    height: 3em;
+    width: 7em;
+    background-color:Blue;
 }
