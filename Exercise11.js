@@ -2,12 +2,15 @@
 $(() => {
 
     $('.cancel_button').click(function () {
-        confirm("Click OK to cancel transaction. Click cancel to continue.")
+        if (confirm("Click OK to cancel transaction. Click cancel to continue.")) {
+            location.reload();
+        }
         //empty subtotal, tax, total, and list of scanned items
     });
-
+    
     $('.items').click(function () {
-        $('<p>Text</p>').appendTo('.list_of_scanned_items');
+        let itemID = this.id;
+        $('.list_of_scanned_items').append($('#' + itemID).val() + '<br>' + '<br>');
     })
 
     $('.system_configuration_button').click(function () {
@@ -22,7 +25,7 @@ $(() => {
 used for pricing purposes
 <!--take prices out and make price check button-->
             <button class="items">SmartWater $1.49</button>
-            <button class="items">Ale 8 $2.39</button>
+            <button class="items">f</button>
             <button class="items">Nooma $2.39</button>
             <button class="items">Gatorade Fierce $1.69</button> <!--make 2/$3-->
             <button class="items">Clif Bar $1.49</button>

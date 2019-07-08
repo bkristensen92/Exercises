@@ -14,7 +14,7 @@ h1 {
     display: grid;
     grid-template-columns: auto auto auto;
     grid-gap: .5em;
-    width: 15em;
+    width: 12em;
     height: 19.5em;
     position: absolute;
     right:44%;
@@ -59,7 +59,7 @@ h1 {
 }
 
 .price_check_button {
-    font-size: 24px;
+    font-size: 1em;
     height: 4em;
     width: 10em;
     background-color: purple;
@@ -73,7 +73,7 @@ h1 {
 }
 
 .finalize_button {
-    font-size: 24px;
+    font-size: 1em;
     height: 4em;
     width: 10em;
     background-color:green;
@@ -86,7 +86,7 @@ h1 {
 }
 
 .cancel_button {
-    font-size: 24px;
+    font-size: 1em;
     height: 4em;
     width: 10em;
     background-color:orange;
@@ -101,7 +101,7 @@ h1 {
 }
 
 .edit_button {
-    font-size: 48px;
+    font-size: 2em;
     height: 3em;
     width: 7em;
     background-color: yellow;
@@ -112,7 +112,7 @@ h1 {
 }
 
 .system_configuration_button {
-    font-size: 48px;
+    font-size: 2em;
     height: 3em;
     width: 7em;
     background-color:Blue;
