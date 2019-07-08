@@ -1,0 +1,93 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="Exercise12.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <title>Point of Sale</title>
+</head>
+
+<body>
+    <div class="list_of_scanned_items">
+    </div>
+
+    <div class="buttons">
+
+        <div class="finalize_transaction_layout">
+            <button class="finalize_button">Finalize Transaction</button>
+        </div>
+
+        <div class="price_check_layout">
+            <button class="price_check_button">Price Check</button>
+        </div>
+
+        <div class="cancel_transaction_layout">
+            <button class="cancel_button">Cancel Transaction</button>
+        </div>
+
+        <div class="number_keys_input">
+            <input type="number" min="1" size="25" id="input">
+        </div>
+
+        <div class="number_pad_layout">
+            <button class="number_keys" id="seven" value="7">7</button>
+            <button class="number_keys" id="eight" value="8">8</button>
+            <button class="number_keys" id="nine" value="9">9</button>
+            <button class="number_keys" id="four" value="4">4</button>
+            <button class="number_keys" id="five" value="5">5</button>
+            <button class="number_keys" id="six" value="6">6</button>
+            <button class="number_keys" id="one" value="1">1</button>
+            <button class="number_keys" id="two" value="2">2</button>
+            <button class="number_keys" id="three" value="3">3</button>
+            <button class="number_keys" id="zero" value ="0">0</button>
+            <button class="clear_key">clr</button>
+            <button class="delete_key">del</button>
+        </div>
+
+        <div class="items_for_sale_layout">
+            <button class="items" id="itemOne" value="SmartWater $1.49">SmartWater</button>
+            <button class="items" id="itemTwo" value="Ale 8 $2.39">Ale 8</button>
+            <button class="items" id="itemThree" value="Nooma$2.39">Nooma</button>
+            <button class="items" id="itemFour" value="Gatorade Fierce $1.69">Gatorade Fierce</button>
+            <button class="items" id="itemFive" value="Clif Bar $1.49">Clif Bar</button>
+            <button class="items" id="itemSix" value="Bolt Energy Chew $2.09">Bolt Energy Chew</button>
+            <button class="items" id="itemSeven" value="Honey Stinger Waffle $1.39">Honey Stinger Waffle</button>
+            <button class="items" id="itemEight" value="Simply Trail Trail Mix $6.39">Simply Trail Trail Mix</button>
+            <button class="items" id="itemNine" value="Country Archer Beef Jerky $5.39">Country Archer Beef Jerky</button>
+            <button class="items" id="itemTen" value="Joshua Tree Climbing Salve $13.46">Joshua Tree Climbing Salve</button>
+            <button class="items" id="itemEleven" value="Mammut Climbing Harness $54.95">Mammut Climbing Harness</button>
+            <button class="items" id="itemTwelve" value="Mammut Climbing Rope $194.96">Mammut Climbing Rope</button>
+            <button class="items" id="itemThirteen" value="Mammut Chalk Bag $21.97">Mammut Chalk Bag</button>
+            <button class="items" id="itemFourteen" value="Black Diamond ATC $15.96">Black Diamond ATC</button>
+            <button class="items" id="itemFifteen" value="CampUSA Carabiner $12.95">CampUSA Carabiner</button>
+            <button class="items" id="itemSixteen" value="CampUSA Quickdraws $74.95">CampUSA Quickdraws</button>
+            <button class="items" id="itemSeventeen" value="Asana White Dirt $24.00">Asana White Dirt</button>
+            <button class="items" id="itemEighteen" value="Tenaya Climbing Shoes $169.95">Tenaya Climbing Shoes</button>
+            <button class="items" id="itemNineteen" value="PrAna Stretch Zion Pants $59.82">PrAna Stretch Zion Pants</button>
+            <button class="items" id="itemTwenty" value="Metolius Master Cam $269.78">Metolius Master Cam</button>
+        </div>
+
+        <div class="edit_button_layout">
+            <button class="edit_button">Edit</button>
+            
+            <div class="system_configuration_button_layout">
+                <button class="system_configuration_button">System Configuration</button>
+            </div>
+        </div>
+
+    </div>
+
+    <div>
+        <h1 class="subtotal_price">Subtotal : </h1>
+        <h1 class="tax_price">Tax :</h1>
+        <h1 class="total_price">Total :</h1>
+    </div>
+
+    <script src="Exercise12.js"></script>
+</body>
+
+</html>
