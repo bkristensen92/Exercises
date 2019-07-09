@@ -30,6 +30,12 @@ $(() => {
         }
     })
 
+    $('.list_of_scanned_items').dblclick(function () {
+        if (confirm("Click OK to delete item. Click cancel to continue.")) {
+            $('p').remove(); //make it remove only the item that is double clicked and after it has been confirmed
+        }
+    })
+
     $('.number_keys').click(function () {
         $('#input').val($('#input').val() + $(this).val());
 

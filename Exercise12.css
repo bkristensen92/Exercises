@@ -5,6 +5,7 @@
 body {
     background-color: lavender;
     padding: 1em;
+    user-select: none;
 }
 h1 {
     text-align: center; 
